@@ -1,0 +1,57 @@
+# DeadlockMaster AI
+
+> The #1 Chrome extension for Deadlock game guides. Hero builds, counters, mechanics, timers, and on-device AI coaching — free to start.
+
+## What Is DeadlockMaster AI?
+
+DeadlockMaster AI is a Chrome browser extension that provides comprehensive in-browser guides for Deadlock, a 6v6 MOBA-shooter hybrid game by Valve Corporation. It renders in Chrome's native sidebar panel so players can reference guides without alt-tabbing out of the game.
+
+## Core Features
+
+### Hero Guides (25 total, 3 free)
+- Ability breakdowns with cooldowns and tips for each ability
+- Phase-by-phase item builds with accurate soul costs: T1=500, T2=1,250, T3=3,000, T4=6,200
+- Power spike timings and build explanations
+- Counter picks: heroes that beat them, heroes they beat, counter items
+- Laning phase tips and teamfight strategies
+- Common mistakes to avoid
+
+### Free Heroes
+- **Abrams** — melee tank brawler, beginner-friendly
+- **Haze** — stealth gun carry, high skill ceiling
+- **Infernus** — fire spirit mage/carry
+
+### Pro Heroes (all 25)
+Yamato, Bebop, Dynamo, Seven, Lash, Vindicta, Grey Talon, Lady Geist, Kelvin, Warden, McGinnis, Shiv, Paradox, Pocket, Ivy, Viscous, Wraith, Mo & Krill, Holliday, Mirage, Sinclair, Calico
+
+### Mechanics Library (Free)
+Step-by-step guides covering: dashing, wall jumping, bunny hopping, parrying, mantle slides, air strafing, zip line techniques, stamina management, wave farming, macro strategy
+
+### Objective Timers (Free)
+Live match clock tracking 9 objectives: Bridge Buffs (5:00), Medium Camps (6:00), Large Camps (8:00), Urn (10:00), Rejuvenator (10:00), Small Camps (2:00)
+
+### AI Coach (Pro)
+On-device Gemini Nano AI via Chrome Prompt API. Asks answered privately on-device. Fallback knowledge base when AI unavailable.
+
+### Saved Builds (Pro)
+Save up to 50 builds, copy as plain text, manage across sessions.
+
+## Pricing
+- Free: 3 heroes, mechanics, timers
+- Monthly: $7.99/month — all 25 heroes, AI Coach, saved builds
+- Yearly: $69/year — all monthly features
+- Lifetime: $159 one-time — everything forever
+
+## Technical Details
+- Chrome Manifest V3 extension
+- Minimum Chrome version: 116
+- AI: Chrome Prompt API / Gemini Nano (on-device only)
+- Payments: ExtensionPay (extensionpay.com)
+- No external APIs except subscription verification
+- No data collection, no analytics
+
+## Links
+- Homepage: https://darkmessiah0071.github.io/deadlockmaster-ai/
+- Chrome Web Store: https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk
+- Privacy Policy: https://darkmessiah0071.github.io/deadlockmaster-ai/privacy.html
+- Extension ID: pkdcdgnadaglbcjhffdmodhhlbncbcjk

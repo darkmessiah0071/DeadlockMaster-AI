@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — DeadlockMaster AI</title>
+  <meta name="description" content="Privacy Policy for DeadlockMaster AI Chrome Extension. We collect no personal data. All AI processing is on-device.">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{background:#090b0e;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;max-width:740px;margin:0 auto;padding:40px 20px;line-height:1.7;}
+    h1{font-size:30px;font-weight:800;color:#e8833a;margin-bottom:6px;}
+    .updated{font-size:13px;color:#7a8fa8;margin-bottom:36px;}
+    h2{font-size:18px;font-weight:700;margin:28px 0 10px;}
+    p,li{font-size:14px;color:#94a3b8;margin-bottom:10px;}
+    ul{margin-left:20px;margin-bottom:12px;}
+    a{color:#e8833a;}a:hover{text-decoration:underline;}
+    .back{display:inline-flex;align-items:center;gap:5px;color:#7a8fa8;font-size:13px;margin-bottom:28px;text-decoration:none;}
+    .back:hover{color:#e2e8f0;}
+    code{background:#0f1419;border:1px solid #1a2435;border-radius:3px;padding:1px 6px;font-size:12px;}
+    .highlight{background:#0f1419;border:1px solid rgba(34,197,94,0.2);border-radius:8px;padding:14px;margin-bottom:16px;font-size:13px;color:#4ade80;}
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back">← Back to Home</a>
+  <h1>Privacy Policy</h1>
+  <div class="updated">Last updated: April 2025 · Version 1.1.0</div>
+
+  <div class="highlight">✅ TL;DR: We collect no personal data. All AI runs on your device. The only external connection is subscription verification via ExtensionPay.</div>
+
+  <h2>1. Overview</h2>
+  <p>DeadlockMaster AI ("the Extension") is committed to your privacy. This policy explains what data the Extension handles, where it is stored, and how it is used.</p>
+
+  <h2>2. Data Stored Locally on Your Device</h2>
+  <p>The Extension uses <code>chrome.storage.local</code> to store the following data exclusively on your device. This data never leaves your device except where noted below:</p>
+  <ul>
+    <li><strong>Subscription status cache</strong> — a temporary 5-minute cache of your subscription status from ExtensionPay. Automatically expires and is refreshed as needed.</li>
+    <li><strong>Saved item builds</strong> — hero builds you explicitly save using the "Save Build" button. Stored locally, never transmitted externally.</li>
+    <li><strong>Review reward status</strong> — whether you have claimed the review reward (true/false) and its expiry date. Never transmitted externally.</li>
+    <li><strong>Extension version and install date</strong> — used for update detection only. Never transmitted externally.</li>
+  </ul>
+
+  <h2>3. Data We Do NOT Collect</h2>
+  <ul>
+    <li>We do not collect your name, email, or any personally identifiable information</li>
+    <li>We do not track which websites you visit or your browsing history</li>
+    <li>We do not collect gameplay data, match results, or in-game statistics</li>
+    <li>We do not use analytics services (Google Analytics, Mixpanel, etc.)</li>
+    <li>We do not display advertisements or share data with advertisers</li>
+    <li>We do not sell any data to any third party</li>
+  </ul>
+
+  <h2>4. AI Features — Gemini Nano (On-Device)</h2>
+  <p>The AI Coach feature uses Google Chrome's built-in Gemini Nano model via the <strong>Chrome Prompt API</strong>. All AI processing occurs entirely on your local device. Your questions and the AI responses exist only in your browser's memory during that session. No AI conversation data is transmitted to any server — not to us, not to Google, not to anyone.</p>
+  <p>If Gemini Nano is unavailable (not downloaded, incompatible hardware, or Chrome version below 116), the Extension falls back to a built-in knowledge base with no network requests made.</p>
+
+  <h2>5. External Connections</h2>
+  <p>The Extension makes exactly <strong>one type of external network request</strong>: subscription verification via ExtensionPay.</p>
+  <ul>
+    <li><strong>Host:</strong> <code>https://extensionpay.com</code></li>
+    <li><strong>Purpose:</strong> Verify whether the current Chrome profile has an active subscription</li>
+    <li><strong>Data sent:</strong> Your Chrome extension runtime ID (a non-personal browser identifier) and the product ID <code>deadlockmaster-ai--tips-guides-free</code></li>
+    <li><strong>Frequency:</strong> Once on first load, then cached for 5 minutes. Only called when the extension is open.</li>
+    <li><strong>ExtensionPay privacy policy:</strong> <a href="https://extensionpay.com/privacy" target="_blank" rel="noopener">extensionpay.com/privacy</a></li>
+  </ul>
+  <p>No other external connections are made. No CDN scripts, no font loading, no image APIs, no analytics endpoints.</p>
+
+  <h2>6. Permissions Explained</h2>
+  <ul>
+    <li><strong>storage</strong> — Saves your builds, settings, and subscription cache locally in <code>chrome.storage.local</code>. No cloud storage involved.</li>
+    <li><strong>sidePanel</strong> — Required to render the guide interface in Chrome's native sidebar panel.</li>
+    <li><strong>activeTab</strong> — Required to open the sidebar panel in the current browser tab's context. The Extension does not read, modify, or interact with any web page content.</li>
+    <li><strong>clipboardWrite</strong> — Used only when you explicitly click "Copy Build" to copy your saved builds as text to the clipboard. Never triggered automatically.</li>
+    <li><strong>alarms</strong> — Keeps the service worker active for the match timer feature and prevents Chrome from suspending it. No data collection occurs during alarm triggers.</li>
+    <li><strong>extensionpay.com (host permission)</strong> — Required solely for subscription status verification. No other hosts are accessed.</li>
+  </ul>
+
+  <h2>7. Children's Privacy</h2>
+  <p>This Extension is not directed at children under 13. We do not knowingly interact with users under 13. If you believe a child under 13 has used this Extension, please contact us and we will address it appropriately.</p>
+
+  <h2>8. Data Retention</h2>
+  <p>All locally stored data persists until you uninstall the Extension or clear Chrome extension storage via Chrome's settings (<code>chrome://settings/siteData</code>). No data is retained on external servers by us.</p>
+
+  <h2>9. Changes to This Policy</h2>
+  <p>We may update this policy to reflect changes to the Extension. Changes will be reflected with an updated "Last updated" date. Continued use of the Extension after changes constitutes acceptance.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about this privacy policy: <a href="mailto:imdarkmessiah007@gmail.com">imdarkmessiah007@gmail.com</a></p>
+
+  <p style="margin-top:36px;font-size:12px;color:#3d4f66;">DeadlockMaster AI is an independent fan project. Not affiliated with Valve Corporation or Deadlock. Extension ID: pkdcdgnadaglbcjhffdmodhhlbncbcjk</p>
+</body>
+</html>

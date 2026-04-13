@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeadlockMaster AI — Best Free Deadlock Guide, Hero Builds & Counters Chrome Extension</title>
+  <meta name="description" content="DeadlockMaster AI is the #1 Chrome extension for Deadlock players. Get hero builds, counter picks, mechanics tutorials, live objective timers, and on-device AI coaching — all free in your browser.">
+  <meta name="keywords" content="Deadlock guide, Deadlock hero builds, Deadlock chrome extension, Deadlock counters, Deadlock mechanics, Deadlock AI coach, Deadlock ranked tips, Deadlock items, Deadlock Abrams, Deadlock Haze, Deadlock Infernus, Valve Deadlock guide, Deadlock tier list, Deadlock best heroes 2024, Deadlock objective timers, Deadlock movement guide">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="DeadlockMaster AI">
+  <meta name="theme-color" content="#e8833a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://darkmessiah0071.github.io/deadlockmaster-ai/">
+  <meta property="og:title" content="DeadlockMaster AI — Best Free Deadlock Guide Chrome Extension">
+  <meta property="og:description" content="Hero builds, counters, mechanics, timers & on-device AI coaching for Deadlock. Free Chrome extension. No account required.">
+  <meta property="og:image" content="https://darkmessiah0071.github.io/deadlockmaster-ai/og-image.png">
+  <meta property="og:site_name" content="DeadlockMaster AI">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DeadlockMaster AI — Free Deadlock Guide">
+  <meta name="twitter:description" content="Hero builds, counters, mechanics & AI coaching for Deadlock. Free Chrome extension.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://darkmessiah0071.github.io/deadlockmaster-ai/">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "DeadlockMaster AI - Tips & Guides FREE",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Chrome",
+    "url": "https://darkmessiah0071.github.io/deadlockmaster-ai/",
+    "downloadUrl": "https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk",
+    "description": "In-browser guide for Deadlock featuring hero builds, counters, mechanics tutorials, objective timers, and on-device AI coaching.",
+    "offers": [
+      { "@type": "Offer", "price": "0", "priceCurrency": "USD", "name": "Free" },
+      { "@type": "Offer", "price": "7.99", "priceCurrency": "USD", "name": "Monthly Pro" },
+      { "@type": "Offer", "price": "69", "priceCurrency": "USD", "name": "Yearly Pro" },
+      { "@type": "Offer", "price": "159", "priceCurrency": "USD", "name": "Lifetime Pro" }
+    ],
+    "featureList": [
+      "25 Deadlock hero guides with builds and counters",
+      "Advanced movement mechanics library",
+      "Live objective timer with 9 objectives",
+      "On-device AI coaching via Gemini Nano",
+      "Counter picker for all heroes",
+      "Save and export item builds"
+    ],
+    "screenshot": "https://darkmessiah0071.github.io/deadlockmaster-ai/screenshot1.png",
+    "softwareVersion": "1.1.0",
+    "author": { "@type": "Person", "name": "darkmessiah0071" }
+  }
+  </script>
+
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is DeadlockMaster AI?",
+        "acceptedAnswer": { "@type": "Answer", "text": "DeadlockMaster AI is a free Chrome extension that provides in-browser guides for Deadlock, including hero builds, counter picks, mechanics tutorials, live objective timers, and on-device AI coaching." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is DeadlockMaster AI free?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. The free tier includes 3 hero guides (Abrams, Haze, Infernus), mechanics library, and objective timers. Pro plans unlock all 25 heroes, AI Coach, and build saving." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does DeadlockMaster AI collect my data?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. All AI processing happens on-device via Chrome's Gemini Nano. We do not collect browsing history, gameplay data, or personal information. Subscription verification is handled by ExtensionPay." }
+      },
+      {
+        "@type": "Question",
+        "name": "What Deadlock heroes are included?",
+        "acceptedAnswer": { "@type": "Answer", "text": "All 25 heroes are covered: Abrams, Haze, Infernus, Yamato, Bebop, Dynamo, Seven, Lash, Vindicta, Grey Talon, Lady Geist, Kelvin, Warden, McGinnis, Shiv, Paradox, Pocket, Ivy, Viscous, Wraith, Mo & Krill, Holliday, Mirage, Sinclair, and Calico." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the AI coaching work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The AI Coach uses Chrome's built-in Gemini Nano model running entirely on your device. Your questions never leave your browser. Ask about builds, counters, mechanics — anything Deadlock-related." }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #090b0e; --bg-card: #0f1419; --bg-hover: #141c26; --border: #1a2435;
+      --accent: #e8833a; --premium: #f7c948; --success: #22c55e;
+      --text: #e2e8f0; --text-dim: #7a8fa8; --text-muted: #3d4f66;
+      --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+    html { scroll-behavior: smooth; }
+    body { background: var(--bg); color: var(--text); font-family: var(--font); -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    .site-nav { position: sticky; top: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between; padding: 0 24px; height: 56px; background: rgba(9,11,14,0.95); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+    .nav-brand { display: flex; align-items: center; gap: 8px; font-size: 16px; font-weight: 800; }
+    .nav-icon { font-size: 20px; }
+    .nav-ai { color: var(--accent); }
+    .nav-links { display: flex; gap: 20px; }
+    .nav-links a { font-size: 13px; color: var(--text-dim); transition: color 0.15s; }
+    .nav-links a:hover { color: var(--text); text-decoration: none; }
+    .nav-cta { background: var(--accent); color: #fff; font-size: 13px; font-weight: 700; padding: 7px 18px; border-radius: 20px; border: none; cursor: pointer; transition: opacity 0.15s; text-decoration: none; }
+    .nav-cta:hover { opacity: 0.88; text-decoration: none; }
+
+    /* Hero Section */
+    .hero { position: relative; text-align: center; padding: 90px 20px 70px; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(232,131,58,0.14) 0%, transparent 65%); pointer-events: none; }
+    .hero-badge { display: inline-flex; align-items: center; gap: 6px; background: rgba(232,131,58,0.12); border: 1px solid rgba(232,131,58,0.25); border-radius: 20px; padding: 5px 14px; font-size: 12px; color: var(--accent); font-weight: 600; margin-bottom: 20px; }
+    .hero h1 { font-size: clamp(30px, 6vw, 56px); font-weight: 900; letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 16px; }
+    .hero h1 span { color: var(--accent); }
+    .hero p { font-size: clamp(15px, 2.5vw, 19px); color: var(--text-dim); max-width: 620px; margin: 0 auto 32px; line-height: 1.65; }
+    .hero-icon { font-size: 72px; display: block; margin-bottom: 20px; filter: drop-shadow(0 0 24px rgba(232,131,58,0.4)); }
+    .cta-group { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 40px; }
+    .cta-primary { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent), #c96d28); color: #fff; font-weight: 800; font-size: 15px; padding: 14px 32px; border-radius: 30px; transition: transform 0.15s, opacity 0.15s; }
+    .cta-primary:hover { opacity: 0.9; transform: translateY(-1px); text-decoration: none; }
+    .cta-secondary { display: inline-flex; align-items: center; gap: 8px; background: var(--bg-card); border: 1px solid var(--border); color: var(--text-dim); font-size: 14px; padding: 13px 24px; border-radius: 30px; transition: border-color 0.15s; }
+    .cta-secondary:hover { border-color: var(--accent); color: var(--text); text-decoration: none; }
+    .badges { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+    .badge { background: var(--bg-card); border: 1px solid var(--border); border-radius: 20px; padding: 5px 13px; font-size: 12px; color: var(--text-dim); }
+
+    /* Features */
+    .section { max-width: 960px; margin: 0 auto; padding: 70px 20px; }
+    .section-header { text-align: center; margin-bottom: 48px; }
+    .section-header h2 { font-size: clamp(24px, 4vw, 38px); font-weight: 800; letter-spacing: -0.5px; margin-bottom: 10px; }
+    .section-header h2 span { color: var(--accent); }
+    .section-header p { font-size: 15px; color: var(--text-dim); max-width: 500px; margin: 0 auto; line-height: 1.6; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
+    .feature-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 12px; padding: 22px; transition: border-color 0.15s, transform 0.15s; }
+    .feature-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+    .feature-icon { font-size: 30px; margin-bottom: 12px; }
+    .feature-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .feature-desc { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+    .free-pill { display: inline-block; background: rgba(34,197,94,0.12); color: var(--success); border: 1px solid rgba(34,197,94,0.2); border-radius: 3px; font-size: 10px; font-weight: 700; padding: 1px 6px; margin-left: 5px; vertical-align: middle; }
+
+    /* Heroes section */
+    .heroes-section { background: var(--bg-card); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 60px 20px; }
+    .heroes-inner { max-width: 960px; margin: 0 auto; }
+    .heroes-inner h2 { text-align: center; font-size: 30px; font-weight: 800; margin-bottom: 10px; }
+    .heroes-inner .sub { text-align: center; color: var(--text-dim); font-size: 14px; margin-bottom: 28px; }
+    .hero-pills { display: flex; flex-wrap: wrap; gap: 7px; justify-content: center; }
+    .hero-pill { background: var(--bg); border: 1px solid var(--border); border-radius: 20px; padding: 5px 13px; font-size: 12px; color: var(--text-dim); }
+    .hero-pill.free-hero { border-color: rgba(34,197,94,0.3); color: var(--success); }
+
+    /* How it works */
+    .steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 20px; }
+    .step { text-align: center; padding: 20px; }
+    .step-num { width: 44px; height: 44px; border-radius: 50%; background: var(--accent); color: #fff; font-size: 18px; font-weight: 800; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; }
+    .step-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .step-desc { font-size: 13px; color: var(--text-dim); line-height: 1.55; }
+
+    /* Pricing */
+    .pricing-section { background: var(--bg-card); border-top: 1px solid var(--border); padding: 70px 20px; }
+    .pricing-inner { max-width: 760px; margin: 0 auto; text-align: center; }
+    .pricing-inner h2 { font-size: 32px; font-weight: 800; margin-bottom: 10px; }
+    .pricing-sub { color: var(--text-dim); font-size: 14px; margin-bottom: 36px; }
+    .plan-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 16px; margin-bottom: 28px; }
+    .plan-card { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 22px 16px; text-align: center; transition: border-color 0.15s; }
+    .plan-card.featured { border-color: var(--accent); background: rgba(232,131,58,0.04); }
+    .plan-name { font-size: 13px; font-weight: 700; margin-bottom: 10px; }
+    .plan-price { font-size: 26px; font-weight: 900; color: var(--accent); letter-spacing: -0.5px; }
+    .plan-period { font-size: 12px; color: var(--text-dim); font-weight: 400; }
+    .plan-desc { font-size: 11px; color: var(--text-dim); margin-top: 8px; line-height: 1.5; }
+    .plan-free-note { font-size: 12px; color: var(--text-dim); margin-bottom: 10px; }
+
+    /* FAQ */
+    .faq-list { display: flex; flex-direction: column; gap: 12px; text-align: left; max-width: 680px; margin: 0 auto; }
+    .faq-item { background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px; padding: 16px 18px; }
+    .faq-q { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .faq-a { font-size: 13px; color: var(--text-dim); line-height: 1.6; }
+
+    /* Footer */
+    .site-footer { background: var(--bg-card); border-top: 1px solid var(--border); padding: 36px 20px; text-align: center; }
+    .footer-links { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 14px; }
+    .footer-links a { font-size: 13px; color: var(--text-dim); }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .hero { padding: 60px 16px 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav">
+    <div class="nav-brand">
+      <span class="nav-icon">⚔️</span>
+      Deadlock<span class="nav-ai">Master</span> AI
+    </div>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#heroes">Heroes</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+      <a href="privacy.html">Privacy</a>
+    </div>
+    <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" class="nav-cta" target="_blank" rel="noopener">Add to Chrome — Free</a>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="hero-icon">⚔️</span>
+    <div class="hero-badge">🎮 Deadlock Guide Extension • 100% Free to Start</div>
+    <h1>Dominate Ranked with<br><span>DeadlockMaster AI</span></h1>
+    <p>The ultimate in-browser guide for Deadlock. Hero builds with soul costs, counter picks, mechanics tutorials, live objective timers, and on-device AI coaching — all in Chrome's sidebar.</p>
+    <div class="cta-group">
+      <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" class="cta-primary" target="_blank" rel="noopener">⚔️ Add to Chrome — Free</a>
+      <a href="#features" class="cta-secondary">See Features ↓</a>
+    </div>
+    <div class="badges">
+      <span class="badge">🦸 25 Heroes</span>
+      <span class="badge">🤖 On-Device AI</span>
+      <span class="badge">⏱️ Live Timers</span>
+      <span class="badge">🛡️ Counter Picks</span>
+      <span class="badge">🏃 Mechanics Guides</span>
+      <span class="badge">🔒 No Data Collected</span>
+      <span class="badge">⚡ Works Offline</span>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="section" id="features">
+    <div class="section-header">
+      <h2>Everything You Need to<br><span>Climb Ranked</span></h2>
+      <p>A complete Deadlock guide system built into Chrome's sidebar — available on every tab, no alt-tabbing required.</p>
+    </div>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🦸</div>
+        <div class="feature-title">Complete Hero Guides <span class="free-pill">3 FREE</span></div>
+        <div class="feature-desc">Full ability breakdowns, phase-by-phase item builds with accurate soul costs (T1–T4), power spike timings, and pro tips for all 25 heroes.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🛡️</div>
+        <div class="feature-title">Counter Picker</div>
+        <div class="feature-desc">Select any enemy hero and instantly see what counters them, what they beat, and the exact counter items to buy in your shop.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏃</div>
+        <div class="feature-title">Mechanics Library <span class="free-pill">FREE</span></div>
+        <div class="feature-desc">Step-by-step guides for dashing, wall jumping, bunny hopping, parrying, mantle slides, air strafing, zip line tricks and stamina management.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⏱️</div>
+        <div class="feature-title">Live Objective Timers <span class="free-pill">FREE</span></div>
+        <div class="feature-desc">Start the clock at match start. Track all 9 objectives simultaneously — Bridge Buffs, Urn, Rejuvenator, and all camp spawns with colour-coded alerts.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🤖</div>
+        <div class="feature-title">AI Coach (Pro)</div>
+        <div class="feature-desc">On-device Gemini Nano AI. Ask anything — builds, counters, mechanics, item costs. Processes privately on your device. Zero data sent anywhere.</div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💾</div>
+        <div class="feature-title">Save & Export Builds (Pro)</div>
+        <div class="feature-desc">Save your favourite item builds, copy them to clipboard as plain text, and keep a library of up to 50 builds across sessions.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section" style="padding-top:0;">
+    <div class="section-header">
+      <h2>Up and Running in <span>60 Seconds</span></h2>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-title">Install from Chrome Web Store</div>
+        <div class="step-desc">Click "Add to Chrome" — free and instant. No account required to start.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-title">Click the Extension Icon</div>
+        <div class="step-desc">The guide panel opens in Chrome's sidebar. Browse heroes, mechanics, and timers without leaving your tab.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-title">Start Your Match</div>
+        <div class="step-desc">Hit "Start Match" in the Timers tab. All 9 objectives start tracking simultaneously.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-title">Ask the AI Coach (Pro)</div>
+        <div class="step-desc">Ask anything Deadlock-related. On-device AI responds in seconds with accurate, specific coaching advice.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEROES -->
+  <section class="heroes-section" id="heroes">
+    <div class="heroes-inner">
+      <h2>All 25 Deadlock Heroes Covered</h2>
+      <p class="sub">3 heroes free to start · Upgrade to unlock all 25 with full builds and counters</p>
+      <div class="hero-pills">
+        <span class="hero-pill free-hero">⚡ Abrams ✓</span>
+        <span class="hero-pill free-hero">🌙 Haze ✓</span>
+        <span class="hero-pill free-hero">🔥 Infernus ✓</span>
+        <span class="hero-pill">⚔️ Yamato</span><span class="hero-pill">🎣 Bebop</span>
+        <span class="hero-pill">🌌 Dynamo</span><span class="hero-pill">⚡ Seven</span>
+        <span class="hero-pill">🪃 Lash</span><span class="hero-pill">🏹 Vindicta</span>
+        <span class="hero-pill">🦅 Grey Talon</span><span class="hero-pill">👻 Lady Geist</span>
+        <span class="hero-pill">🧊 Kelvin</span><span class="hero-pill">🏛️ Warden</span>
+        <span class="hero-pill">🔧 McGinnis</span><span class="hero-pill">🗡️ Shiv</span>
+        <span class="hero-pill">⏱️ Paradox</span><span class="hero-pill">🎩 Pocket</span>
+        <span class="hero-pill">🌿 Ivy</span><span class="hero-pill">🟡 Viscous</span>
+        <span class="hero-pill">🃏 Wraith</span><span class="hero-pill">🐛 Mo &amp; Krill</span>
+        <span class="hero-pill">🤠 Holliday</span><span class="hero-pill">🌪️ Mirage</span>
+        <span class="hero-pill">🎪 Sinclair</span><span class="hero-pill">🐱 Calico</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRICING -->
+  <section class="pricing-section" id="pricing">
+    <div class="pricing-inner">
+      <h2>Simple, Fair Pricing</h2>
+      <p class="pricing-sub">Free to start. Upgrade when you're ready.<br>Or leave a ⭐ review and get 30 days Pro free — no payment required.</p>
+      <p class="plan-free-note">💡 <strong>Free plan includes:</strong> Abrams, Haze &amp; Infernus guides · Mechanics library · Objective timers</p>
+      <div class="plan-grid">
+        <div class="plan-card">
+          <div class="plan-name">Free</div>
+          <div class="plan-price">$0</div>
+          <div class="plan-desc">3 heroes<br>Mechanics<br>Timers</div>
+        </div>
+        <div class="plan-card featured">
+          <div class="plan-name">Monthly</div>
+          <div class="plan-price">$7.99<span class="plan-period">/mo</span></div>
+          <div class="plan-desc">All 25 heroes<br>AI Coach<br>Save builds<br>Counter picker</div>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">Yearly</div>
+          <div class="plan-price">$69<span class="plan-period">/yr</span></div>
+          <div class="plan-desc">All monthly<br><strong style="color:var(--success);">Best value</strong><br>($5.75/mo)</div>
+        </div>
+        <div class="plan-card">
+          <div class="plan-name">Lifetime</div>
+          <div class="plan-price">$159</div>
+          <div class="plan-desc">Everything forever<br>All future updates<br>Early access</div>
+        </div>
+      </div>
+      <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" class="cta-primary" style="display:inline-flex;margin-top:8px;" target="_blank" rel="noopener">⚔️ Get Started Free</a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-header">
+      <h2>Frequently Asked <span>Questions</span></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item">
+        <div class="faq-q">What is DeadlockMaster AI?</div>
+        <div class="faq-a">DeadlockMaster AI is a free Chrome extension that provides a complete in-browser guide for Valve's Deadlock. It includes hero builds with accurate soul costs, counter picks, advanced mechanics tutorials, live objective timers, and an on-device AI coach powered by Gemini Nano.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does it collect any of my data?</div>
+        <div class="faq-a">No. All AI processing happens entirely on your device using Chrome's built-in Gemini Nano model. We do not collect browsing history, game data, or any personal information. The only external connection is to ExtensionPay.com for subscription verification.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Which heroes are in the free tier?</div>
+        <div class="faq-a">The free tier includes full guides for Abrams, Haze, and Infernus. The mechanics library and objective timers are also fully free with no restrictions.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">How do I get 30 days of Pro free?</div>
+        <div class="faq-a">Open the extension, click ⚙️ Settings, and tap "Leave Review &amp; Claim Reward." This opens your browser's Chrome Web Store review page for DeadlockMaster AI. After leaving a review, your 30-day Pro access is activated immediately — no payment needed.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Does the AI Coach work offline?</div>
+        <div class="faq-a">The hero guides, mechanics library, and timers work fully offline. The AI Coach requires Gemini Nano to be downloaded — once downloaded it also works offline. A smart fallback mode is available when AI is unavailable.</div>
+      </div>
+      <div class="faq-item">
+        <div class="faq-q">Is this affiliated with Valve?</div>
+        <div class="faq-a">No. DeadlockMaster AI is an independent fan project and is not affiliated with, endorsed by, or sponsored by Valve Corporation. Deadlock is a trademark of Valve Corporation.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" target="_blank" rel="noopener">Chrome Web Store</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="https://extensionpay.com" target="_blank" rel="noopener">Payments by ExtensionPay</a>
+    </div>
+    <div class="footer-copy">
+      DeadlockMaster AI is an independent fan project. Not affiliated with Valve Corporation.<br>
+      Deadlock™ is a trademark of Valve Corporation. All rights reserved.<br>
+      © 2025 darkmessiah0071
+    </div>
+  </footer>
+
+</body>
+</html>
