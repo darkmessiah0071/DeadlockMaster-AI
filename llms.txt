@@ -1,0 +1,80 @@
+# DeadlockMaster AI - Stats & Guides
+
+> Chrome extension combining a Deadlock player stats tracker with hero guides, counter picks, mechanics tutorials, live objective timers, automated patch notes, and on-device AI coaching.
+
+## What Is DeadlockMaster AI?
+
+DeadlockMaster AI is a Chrome browser extension that provides a comprehensive in-browser toolset for Deadlock (a 6v6 MOBA-shooter by Valve). It renders in Chrome's native sidebar panel so players can track stats and reference guides without alt-tabbing out of the game.
+
+## Core Features
+
+### Player Stats Tracker (Free)
+- Search any player by Steam64 ID, Steam32 ID, or Steam vanity URL
+- Displays current rank tier (Obscurus through Eternus) with colour-coded badge
+- Win rate, W/L record, total matches, average KDA
+- Per-hero breakdown: games played, win rate bar, average KDA per hero
+- Last 15 match history: hero, KDA, win/loss, duration, date
+- Recent searches saved for quick access
+- Links to deadlock.gg for full profile
+
+### Automated Patch Notes (Free)
+- Auto-fetched from Steam's official ISteamNews API (appid 1422450)
+- Refreshed every hour — no manual input ever needed
+- Red dot notification on nav tab when new patch arrives
+- Expandable full notes per patch, direct Steam link
+- Background fetch on startup keeps data fresh
+
+### Hero Guides (3 Free, All 25 on Pro)
+- Ability breakdowns with cooldowns and coaching tips
+- Phase-by-phase item builds with accurate soul costs: T1=500, T2=1250, T3=3000, T4=6200
+- Power spike timings
+- Counter picks: heroes that counter them, heroes they beat, counter items to buy
+- Laning tips, teamfight strategies, common mistakes
+
+### Free Heroes
+- Abrams (melee tank brawler)
+- Haze (stealth gun carry)
+- Infernus (fire spirit mage)
+
+### Pro Heroes (all 25)
+Yamato, Bebop, Dynamo, Seven, Lash, Vindicta, Grey Talon, Lady Geist, Kelvin, Warden, McGinnis, Shiv, Paradox, Pocket, Ivy, Viscous, Wraith, Mo & Krill, Holliday, Mirage, Sinclair, Calico
+
+### Mechanics Library (Free)
+Dashing, wall jumping, bunny hopping, parrying, mantle slides, air strafing, zip line techniques, stamina management, wave farming, macro strategy
+
+### Live Objective Timers (Free)
+9 objectives tracked: Bridge Buffs (5:00), Medium Camps (6:00), Large Camps (8:00), Urn (10:00), Rejuvenator (10:00), Small Camps (2:00), Soul Crates, Slot Machine, Patron Guardians
+
+### AI Coach (Pro)
+On-device Gemini Nano via Chrome Prompt API. Answers about builds, counters, mechanics, timers — fully private, no data sent externally. Smart fallback knowledge base when AI unavailable.
+
+### Saved Builds (Pro)
+Save up to 50 builds, copy as plain text, manage library across sessions.
+
+## Rank System (All 12 Tiers Tracked)
+Obscurus → Initiate (I-VI) → Seeker (I-VI) → Alchemist (I-VI) → Arcanist (I-VI) → Ritualist (I-VI) → Emissary (I-VI) → Archon (I-VI) → Oracle (I-VI) → Phantom (I-VI) → Ascendant (I-VI) → Eternus
+
+## Pricing
+- Free: Stats tracker, patch notes, mechanics, timers, 3 hero guides
+- Monthly: $7.99/month — all 25 heroes, AI Coach, saved builds, counter picker
+- Yearly: $69/year — all monthly features
+- Lifetime: $159 one-time — everything forever
+
+## External APIs Used
+- api.deadlock-api.com — player stats, match history, hero stats (only when user searches)
+- api.steampowered.com — patch notes via ISteamNews (hourly background fetch)
+- steamcommunity.com — Steam vanity URL to Steam64 ID resolution (only when user enters a name)
+- extensionpay.com — subscription verification only
+
+## Technical
+- Chrome Manifest V3 extension
+- Minimum Chrome version: 116
+- AI: Chrome Prompt API / Gemini Nano (on-device only)
+- Payments: ExtensionPay
+- No analytics, no personal data collection
+
+## Links
+- Homepage: https://darkmessiah0071.github.io/DeadlockMaster-AI/
+- Chrome Web Store: https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk
+- Privacy Policy: https://darkmessiah0071.github.io/DeadlockMaster-AI/privacy.html
+- Extension ID: pkdcdgnadaglbcjhffdmodhhlbncbcjk

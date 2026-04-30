@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DeadlockMaster AI — Deadlock Stats Tracker, Hero Builds & Guides Chrome Extension</title>
+  <meta name="description" content="Track Deadlock player rank & stats, get hero builds, counter picks, mechanics guides, live objective timers, automated patch notes, and on-device AI coaching. Free Chrome extension.">
+  <meta name="keywords" content="Deadlock stats tracker, Deadlock rank tracker, Deadlock player stats, Deadlock chrome extension, Deadlock hero builds, Deadlock counters, Deadlock mechanics, Deadlock AI coach, Deadlock patch notes, Deadlock win rate, Deadlock match history, Deadlock KDA tracker, Deadlock ranked guide, Deadlock tier list 2025, Deadlock best heroes 2025, Deadlock items soul cost">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
+  <meta name="author" content="DeadlockMaster AI">
+  <meta name="theme-color" content="#e8833a">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://darkmessiah0071.github.io/DeadlockMaster-AI/">
+  <meta property="og:title" content="DeadlockMaster AI — Deadlock Stats Tracker & Guide Extension">
+  <meta property="og:description" content="Track your Deadlock rank and stats, get hero builds, counter picks, mechanics, live timers, patch notes, and AI coaching. Free Chrome extension.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://darkmessiah0071.github.io/DeadlockMaster-AI/">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"DeadlockMaster AI - Stats & Guides","applicationCategory":"GameApplication","operatingSystem":"Chrome","url":"https://darkmessiah0071.github.io/DeadlockMaster-AI/","downloadUrl":"https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk","description":"Chrome extension for Deadlock featuring player stat tracking, rank display, match history, hero builds, counter picks, mechanics tutorials, live objective timers, automated patch notes, and on-device AI coaching.","offers":[{"@type":"Offer","price":"0","priceCurrency":"USD","name":"Free"},{"@type":"Offer","price":"7.99","priceCurrency":"USD","name":"Monthly Pro"},{"@type":"Offer","price":"69","priceCurrency":"USD","name":"Yearly Pro"},{"@type":"Offer","price":"159","priceCurrency":"USD","name":"Lifetime Pro"}],"featureList":["Deadlock player rank and stats tracker","Match history with KDA and win rate","Per-hero stats breakdown","Search friends by Steam ID","25 hero guides with soul-cost item builds","Counter picker","Mechanics library","Live objective timers","Automated patch notes","On-device AI coaching"],"softwareVersion":"1.4.0","author":{"@type":"Person","name":"darkmessiah0071"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Can DeadlockMaster AI track my Deadlock rank and stats?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter your Steam64 ID, Steam32 ID, or Steam vanity name in the Stats tab to see your rank, win rate, KDA, match history, and per-hero breakdown."}},{"@type":"Question","name":"Do patch notes update automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. Patch notes are fetched automatically from Steam every hour. A red dot appears on the Patches tab when there is something new you have not read."}},{"@type":"Question","name":"Can I check my friends stats and rank?","acceptedAnswer":{"@type":"Answer","text":"Yes. Enter any Steam ID or name in the Stats tab. Recent searches are saved as quick-tap chips."}},{"@type":"Question","name":"Is DeadlockMaster AI free?","acceptedAnswer":{"@type":"Answer","text":"Stats tracking, patch notes, mechanics and timers are fully free. Pro plans unlock all 25 hero guides, AI coaching, and build saving."}},{"@type":"Question","name":"Does it collect my data?","acceptedAnswer":{"@type":"Answer","text":"No. Stats use only the Steam ID you enter and are not stored. AI runs on-device. The only external connections are the public Deadlock API, Steam news API, and ExtensionPay for subscriptions."}}]}</script>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    :root{--bg:#090b0e;--bg-card:#0f1419;--bg-hover:#141c26;--border:#1a2435;--accent:#e8833a;--premium:#f7c948;--success:#22c55e;--accent2:#4fc3f7;--text:#e2e8f0;--text-dim:#7a8fa8;--text-muted:#3d4f66;--font:-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;}
+    html{scroll-behavior:smooth;}body{background:var(--bg);color:var(--text);font-family:var(--font);-webkit-font-smoothing:antialiased;}a{color:var(--accent);text-decoration:none;}a:hover{text-decoration:underline;}
+    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:56px;background:rgba(9,11,14,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+    .brand{display:flex;align-items:center;gap:8px;font-size:16px;font-weight:800;color:var(--text);}.brand-ai{color:var(--accent);}
+    .nav-links{display:flex;gap:18px;}.nav-links a{font-size:13px;color:var(--text-dim);transition:color .15s;}.nav-links a:hover{color:var(--text);text-decoration:none;}
+    .nav-cta{background:var(--accent);color:#fff;font-size:13px;font-weight:700;padding:7px 18px;border-radius:20px;transition:opacity .15s;}.nav-cta:hover{opacity:.88;text-decoration:none;}
+    .hero{position:relative;text-align:center;padding:90px 20px 70px;overflow:hidden;}
+    .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 0%,rgba(232,131,58,0.14) 0%,transparent 65%);pointer-events:none;}
+    .eyebrow{display:inline-flex;align-items:center;gap:6px;background:rgba(232,131,58,0.1);border:1px solid rgba(232,131,58,0.25);border-radius:20px;padding:5px 14px;font-size:12px;color:var(--accent);font-weight:600;margin-bottom:20px;}
+    h1{font-size:clamp(28px,5.5vw,54px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;margin-bottom:16px;}h1 span{color:var(--accent);}
+    .hero-icon{font-size:72px;display:block;margin-bottom:20px;filter:drop-shadow(0 0 24px rgba(232,131,58,0.4));}
+    .hero-p{font-size:clamp(14px,2.2vw,17px);color:var(--text-dim);max-width:640px;margin:0 auto 32px;line-height:1.65;}
+    .cta-row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
+    .cta-main{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--accent),#c96d28);color:#fff;font-weight:800;font-size:15px;padding:14px 32px;border-radius:30px;transition:opacity .15s,transform .15s;}.cta-main:hover{opacity:.9;transform:translateY(-1px);text-decoration:none;}
+    .cta-sec{display:inline-flex;align-items:center;background:var(--bg-card);border:1px solid var(--border);color:var(--text-dim);font-size:14px;padding:13px 22px;border-radius:30px;transition:border-color .15s;}.cta-sec:hover{border-color:var(--accent);color:var(--text);text-decoration:none;}
+    .badges{display:flex;gap:7px;justify-content:center;flex-wrap:wrap;}
+    .badge{background:var(--bg-card);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:12px;color:var(--text-dim);}
+    .badge.hot{border-color:rgba(232,131,58,0.3);color:var(--accent);background:rgba(232,131,58,0.06);}
+    .section{max-width:980px;margin:0 auto;padding:64px 20px;}
+    .sh{text-align:center;margin-bottom:44px;}.sh h2{font-size:clamp(22px,3.8vw,36px);font-weight:800;letter-spacing:-.5px;margin-bottom:10px;}.sh h2 span{color:var(--accent);}.sh p{font-size:14px;color:var(--text-dim);max-width:500px;margin:0 auto;line-height:1.6;}
+    .stats-demo{background:var(--bg-card);border:1px solid var(--border);border-radius:14px;padding:22px;margin-bottom:28px;}
+    .demo-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:8px;}
+    .demo-title{font-size:15px;font-weight:800;}
+    .rank-pill{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;}
+    .stat-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+    .stat-mini-box{background:var(--bg-hover);border:1px solid var(--border);border-radius:8px;padding:10px 6px;text-align:center;}
+    .smv{font-size:18px;font-weight:800;letter-spacing:-.3px;}.sml{font-size:10px;color:var(--text-muted);text-transform:uppercase;letter-spacing:.4px;margin-top:2px;}
+    .grid4{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;}
+    .g4card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:16px;}
+    .g4icon{font-size:22px;margin-bottom:8px;}.g4title{font-size:13px;font-weight:700;margin-bottom:5px;}.g4desc{font-size:12px;color:var(--text-dim);line-height:1.55;}
+    .rank-band{background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:50px 20px;}
+    .rank-inner{max-width:980px;margin:0 auto;text-align:center;}
+    .rank-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:8px;margin-top:22px;}
+    .rcard{background:var(--bg);border:1px solid transparent;border-radius:8px;padding:10px;text-align:center;transition:transform .15s;}.rcard:hover{transform:translateY(-2px);}
+    .rname{font-size:12px;font-weight:700;margin-top:4px;}
+    .feat-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;}
+    .fcard{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:20px;transition:border-color .15s,transform .15s;}.fcard:hover{border-color:var(--accent);transform:translateY(-1px);}
+    .fcard.new{border-color:rgba(79,195,247,0.25);background:rgba(79,195,247,0.03);}
+    .ficon{font-size:28px;margin-bottom:10px;}.ftitle{font-size:14px;font-weight:700;margin-bottom:7px;}.fdesc{font-size:12px;color:var(--text-dim);line-height:1.6;}
+    .ntag{display:inline-block;background:rgba(79,195,247,0.1);color:var(--accent2);border:1px solid rgba(79,195,247,0.2);border-radius:3px;font-size:9px;font-weight:800;padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .ftag{display:inline-block;background:rgba(34,197,94,0.08);color:var(--success);border:1px solid rgba(34,197,94,0.18);border-radius:3px;font-size:9px;font-weight:800;padding:1px 5px;margin-left:5px;vertical-align:middle;}
+    .heroes-band{background:var(--bg-card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:56px 20px;}
+    .hi{max-width:980px;margin:0 auto;text-align:center;}.hi h2{font-size:26px;font-weight:800;margin-bottom:8px;}.hi .sub{color:var(--text-dim);font-size:13px;margin-bottom:24px;}
+    .pills{display:flex;flex-wrap:wrap;gap:6px;justify-content:center;}
+    .pill{background:var(--bg);border:1px solid var(--border);border-radius:20px;padding:4px 12px;font-size:11px;color:var(--text-dim);}
+    .pill.f{border-color:rgba(34,197,94,0.3);color:var(--success);}
+    .steps-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:18px;}
+    .step{text-align:center;padding:16px;}.snum{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-size:16px;font-weight:800;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;}.stitle{font-size:13px;font-weight:700;margin-bottom:5px;}.sdesc{font-size:12px;color:var(--text-dim);line-height:1.55;}
+    .price-band{background:var(--bg-card);border-top:1px solid var(--border);padding:64px 20px;}
+    .pi{max-width:740px;margin:0 auto;text-align:center;}.pi h2{font-size:28px;font-weight:800;margin-bottom:8px;}.psub{color:var(--text-dim);font-size:13px;margin-bottom:30px;line-height:1.6;}
+    .plan-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(155px,1fr));gap:12px;margin-bottom:24px;}
+    .pcard{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:18px 12px;text-align:center;}.pcard.feat{border-color:var(--accent);background:rgba(232,131,58,0.04);}
+    .pname{font-size:12px;font-weight:700;margin-bottom:7px;}.pprice{font-size:22px;font-weight:900;color:var(--accent);letter-spacing:-.3px;}.pper{font-size:11px;color:var(--text-dim);font-weight:400;}.pdesc{font-size:11px;color:var(--text-dim);margin-top:6px;line-height:1.5;}
+    .faq-list{display:flex;flex-direction:column;gap:10px;max-width:700px;margin:0 auto;}
+    .faq{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:15px 17px;}.fq{font-size:13px;font-weight:700;margin-bottom:6px;}.fa{font-size:12px;color:var(--text-dim);line-height:1.6;}
+    footer{background:var(--bg-card);border-top:1px solid var(--border);padding:32px 20px;text-align:center;}
+    .fl{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:12px;}.fl a{font-size:12px;color:var(--text-dim);}.fl a:hover{color:var(--text);}
+    .fc{font-size:11px;color:var(--text-muted);line-height:1.7;}
+    @media(max-width:600px){.nav-links{display:none;}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="brand"><span style="font-size:20px;">⚔️</span>Deadlock<span class="brand-ai">Master</span> AI</div>
+  <div class="nav-links"><a href="#features">Features</a><a href="#stats">Stats</a><a href="#heroes">Heroes</a><a href="#pricing">Pricing</a><a href="#faq">FAQ</a><a href="privacy.html">Privacy</a></div>
+  <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" class="nav-cta" target="_blank" rel="noopener">Add to Chrome</a>
+</nav>
+
+<section class="hero">
+  <span class="hero-icon">⚔️</span>
+  <div class="eyebrow">📊 Stats Tracker + Complete Deadlock Guide · Free to Start</div>
+  <h1>Track Your Rank.<br><span>Master Deadlock.</span></h1>
+  <p class="hero-p">The only Chrome extension that combines a full Deadlock stats tracker with hero builds, counter picks, mechanics guides, live objective timers, automated patch notes, and on-device AI coaching — all in your browser sidebar.</p>
+  <div class="cta-row">
+    <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" class="cta-main" target="_blank" rel="noopener">⚔️ Add to Chrome — Free</a>
+    <a href="#stats" class="cta-sec">See Stats Tracker ↓</a>
+  </div>
+  <div class="badges">
+    <span class="badge hot">📊 Rank Tracker</span><span class="badge hot">🏆 Match History</span><span class="badge">🦸 25 Heroes</span>
+    <span class="badge">🤖 On-Device AI</span><span class="badge">⏱️ Live Timers</span><span class="badge hot">📋 Auto Patch Notes</span><span class="badge">🔒 No Data Collected</span>
+  </div>
+</section>
+
+<section class="section" id="stats">
+  <div class="sh"><h2>Full <span>Stats Tracker</span> Built In</h2><p>Search any player by Steam ID or name. See rank, win rate, KDA, match history, and per-hero breakdown — like deadlock.gg, inside your sidebar.</p></div>
+  <div class="stats-demo">
+    <div class="demo-head">
+      <div class="demo-title">🎮 Example Player Profile</div>
+      <span class="rank-pill" style="background:rgba(168,85,247,0.1);color:#a855f7;border:1px solid rgba(168,85,247,0.3);">🟣 Ritualist IV</span>
+    </div>
+    <div class="stat-mini">
+      <div class="stat-mini-box"><div class="smv">847</div><div class="sml">Matches</div></div>
+      <div class="stat-mini-box"><div class="smv" style="color:var(--success);">58.4%</div><div class="sml">Win Rate</div></div>
+      <div class="stat-mini-box"><div class="smv">6.1/4.2/8.3</div><div class="sml">Avg K/D/A</div></div>
+    </div>
+    <p style="font-size:11px;color:var(--text-muted);margin-top:10px;text-align:center;">Enter your Steam ID in the Stats tab to see your real data</p>
+  </div>
+  <div class="grid4">
+    <div class="g4card"><div class="g4icon">🔍</div><div class="g4title">Search Any Player</div><div class="g4desc">Steam64 ID, Steam32 ID, or vanity name. Recent searches saved as quick-tap chips.</div></div>
+    <div class="g4card"><div class="g4icon">🏆</div><div class="g4title">Rank & Win Rate</div><div class="g4desc">Full rank tier (Obscurus → Eternus) with matching colour, W/L record, and win rate.</div></div>
+    <div class="g4card"><div class="g4icon">⚔️</div><div class="g4title">Per-Hero Stats</div><div class="g4desc">Every hero played: game count, visual win rate bar, and average KDA — sorted by most played.</div></div>
+    <div class="g4card"><div class="g4icon">📜</div><div class="g4title">Match History</div><div class="g4desc">Last 15 matches with hero icon, KDA, win/loss result, duration and date.</div></div>
+  </div>
+</section>
+
+<section class="rank-band">
+  <div class="rank-inner">
+    <h2 style="font-size:24px;font-weight:800;margin-bottom:8px;">All Deadlock <span style="color:var(--accent);">Rank Tiers</span> Tracked</h2>
+    <p style="font-size:13px;color:var(--text-dim);">From Obscurus to Eternus — see exactly where you and your friends stand</p>
+    <div class="rank-grid">
+      <div class="rcard" style="border-color:#6b728033;"><div style="font-size:22px;">🌑</div><div class="rname" style="color:#6b7280;">Obscurus</div></div>
+      <div class="rcard" style="border-color:#78716c33;"><div style="font-size:22px;">🟤</div><div class="rname" style="color:#a8a29e;">Initiate</div></div>
+      <div class="rcard" style="border-color:#22c55e33;"><div style="font-size:22px;">🟢</div><div class="rname" style="color:#22c55e;">Seeker</div></div>
+      <div class="rcard" style="border-color:#06b6d433;"><div style="font-size:22px;">🔵</div><div class="rname" style="color:#06b6d4;">Alchemist</div></div>
+      <div class="rcard" style="border-color:#3b82f633;"><div style="font-size:22px;">💙</div><div class="rname" style="color:#3b82f6;">Arcanist</div></div>
+      <div class="rcard" style="border-color:#8b5cf633;"><div style="font-size:22px;">🟣</div><div class="rname" style="color:#8b5cf6;">Ritualist</div></div>
+      <div class="rcard" style="border-color:#a855f733;"><div style="font-size:22px;">💜</div><div class="rname" style="color:#a855f7;">Emissary</div></div>
+      <div class="rcard" style="border-color:#f59e0b33;"><div style="font-size:22px;">🟡</div><div class="rname" style="color:#f59e0b;">Archon</div></div>
+      <div class="rcard" style="border-color:#f9731633;"><div style="font-size:22px;">🟠</div><div class="rname" style="color:#f97316;">Oracle</div></div>
+      <div class="rcard" style="border-color:#ef444433;"><div style="font-size:22px;">🔴</div><div class="rname" style="color:#ef4444;">Phantom</div></div>
+      <div class="rcard" style="border-color:#ec489933;"><div style="font-size:22px;">💗</div><div class="rname" style="color:#ec4899;">Ascendant</div></div>
+      <div class="rcard" style="border-color:#f7c94855;background:rgba(247,201,72,0.04);"><div style="font-size:22px;">👑</div><div class="rname" style="color:#f7c948;">Eternus</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="features">
+  <div class="sh"><h2>Everything in <span>One Sidebar</span></h2><p>No more alt-tabbing. Stats, guides, timers, patch notes and AI coaching — one click away.</p></div>
+  <div class="feat-grid">
+    <div class="fcard new"><div class="ficon">📊</div><div class="ftitle">Stats Tracker <span class="ntag">NEW</span></div><div class="fdesc">Rank, win rate, KDA, match history and per-hero breakdown for any player. Search friends by Steam ID or name.</div></div>
+    <div class="fcard new"><div class="ficon">📋</div><div class="ftitle">Automated Patch Notes <span class="ntag">NEW</span></div><div class="fdesc">Auto-fetched from Steam every hour. Red dot on tab when a new patch arrives. No manual updates ever needed.</div></div>
+    <div class="fcard"><div class="ficon">🦸</div><div class="ftitle">Hero Guides <span class="ftag">3 FREE</span></div><div class="fdesc">Abilities, phase-by-phase builds with soul costs, power spikes, counter picks and laning tips for all 25 heroes.</div></div>
+    <div class="fcard"><div class="ficon">🛡️</div><div class="ftitle">Counter Picker</div><div class="fdesc">Select the enemy hero and instantly see their hard counters, soft counters, and the best counter items.</div></div>
+    <div class="fcard"><div class="ficon">🏃</div><div class="ftitle">Mechanics Library <span class="ftag">FREE</span></div><div class="fdesc">Wall jumping, bunny hopping, parrying, mantle slides, air strafing, zip line tricks and stamina management.</div></div>
+    <div class="fcard"><div class="ficon">⏱️</div><div class="ftitle">Live Timers <span class="ftag">FREE</span></div><div class="fdesc">Track all 9 objectives simultaneously. Green when spawning, red when urgent. Start the clock at match start.</div></div>
+    <div class="fcard"><div class="ficon">🤖</div><div class="ftitle">AI Coach (Pro)</div><div class="fdesc">On-device Gemini Nano AI. Ask about builds, counters, mechanics. Fully private — nothing sent externally.</div></div>
+    <div class="fcard"><div class="ficon">💾</div><div class="ftitle">Save Builds (Pro)</div><div class="fdesc">Save up to 50 item builds, copy as plain text and manage your collection across sessions.</div></div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="sh"><h2>Up and Running in <span>60 Seconds</span></h2></div>
+  <div class="steps-grid">
+    <div class="step"><div class="snum">1</div><div class="stitle">Install from Chrome</div><div class="sdesc">Free and instant. Stats, timers, mechanics and patch notes work immediately.</div></div>
+    <div class="step"><div class="snum">2</div><div class="stitle">Open the Panel</div><div class="sdesc">Click ⚔️. The guide opens in Chrome's sidebar alongside any tab.</div></div>
+    <div class="step"><div class="snum">3</div><div class="stitle">Track Your Stats</div><div class="sdesc">Enter your Steam ID. Rank, win rate, match history and hero breakdown in seconds.</div></div>
+    <div class="step"><div class="snum">4</div><div class="stitle">Never Miss a Patch</div><div class="sdesc">Red dot appears on the Patches tab automatically when a new update drops.</div></div>
+  </div>
+</section>
+
+<section class="heroes-band" id="heroes">
+  <div class="hi">
+    <h2>All 25 Deadlock Heroes Covered</h2>
+    <p class="sub">3 heroes free · All 25 with full builds and counters on Pro</p>
+    <div class="pills">
+      <span class="pill f">⚡ Abrams ✓</span><span class="pill f">🌙 Haze ✓</span><span class="pill f">🔥 Infernus ✓</span>
+      <span class="pill">⚔️ Yamato</span><span class="pill">🎣 Bebop</span><span class="pill">🌌 Dynamo</span><span class="pill">⚡ Seven</span>
+      <span class="pill">🪃 Lash</span><span class="pill">🏹 Vindicta</span><span class="pill">🦅 Grey Talon</span><span class="pill">👻 Lady Geist</span>
+      <span class="pill">🧊 Kelvin</span><span class="pill">🏛️ Warden</span><span class="pill">🔧 McGinnis</span><span class="pill">🗡️ Shiv</span>
+      <span class="pill">⏱️ Paradox</span><span class="pill">🎩 Pocket</span><span class="pill">🌿 Ivy</span><span class="pill">🟡 Viscous</span>
+      <span class="pill">🃏 Wraith</span><span class="pill">🐛 Mo &amp; Krill</span><span class="pill">🤠 Holliday</span><span class="pill">🌪️ Mirage</span>
+      <span class="pill">🎪 Sinclair</span><span class="pill">🐱 Calico</span>
+    </div>
+  </div>
+</section>
+
+<section class="price-band" id="pricing">
+  <div class="pi">
+    <h2>Simple Pricing</h2>
+    <p class="psub">Stats tracking, patch notes, mechanics and timers are always free.<br>Upgrade for all hero guides, AI coaching and build saving.<br>Or leave a ⭐ review for 30 days Pro free.</p>
+    <div class="plan-grid">
+      <div class="pcard"><div class="pname">Free</div><div class="pprice">$0</div><div class="pdesc">Stats tracker · Patch notes · Mechanics · Timers · 3 heroes</div></div>
+      <div class="pcard feat"><div class="pname">Monthly</div><div class="pprice">$7.99<span class="pper">/mo</span></div><div class="pdesc">All 25 heroes · AI Coach · Save builds · Counters</div></div>
+      <div class="pcard"><div class="pname">Yearly</div><div class="pprice">$69<span class="pper">/yr</span></div><div class="pdesc">All monthly · <strong style="color:var(--success);">Best value</strong> · $5.75/mo</div></div>
+      <div class="pcard"><div class="pname">Lifetime</div><div class="pprice">$159</div><div class="pdesc">Everything forever · All future updates · Early access</div></div>
+    </div>
+    <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" class="cta-main" style="display:inline-flex;margin-top:6px;" target="_blank" rel="noopener">⚔️ Get Started Free</a>
+  </div>
+</section>
+
+<section class="section" id="faq">
+  <div class="sh"><h2>Frequently Asked <span>Questions</span></h2></div>
+  <div class="faq-list">
+    <div class="faq"><div class="fq">Can DeadlockMaster AI track my Deadlock rank and stats?</div><div class="fa">Yes. Go to the Stats tab and enter your Steam64 ID, Steam32 ID, or Steam vanity name to see your rank tier, win rate, KDA, match history, and per-hero breakdown. You can also search any other player to compare ranks.</div></div>
+    <div class="faq"><div class="fq">How do I find my Steam ID?</div><div class="fa">Open your Steam profile in a browser. The URL shows your vanity name or a 17-digit Steam64 ID. You can also use steamidfinder.com to look up your ID.</div></div>
+    <div class="faq"><div class="fq">Do patch notes update automatically?</div><div class="fa">Yes, fully automated. Patch notes are fetched from Steam's official news API every hour. A red dot appears on the Patches tab when a new patch drops that you have not yet read. No manual input is ever required.</div></div>
+    <div class="faq"><div class="fq">Can I check my friends' stats and ranks?</div><div class="fa">Yes. Just enter their Steam ID or Steam name in the Stats tab search. Your five most recent searches are saved as quick-tap chips at the top of the tab.</div></div>
+    <div class="faq"><div class="fq">Does it collect my personal data?</div><div class="fa">No. Stats are fetched using only the Steam ID you type — we do not store it. AI runs entirely on your device via Gemini Nano. External connections: public Deadlock community API (stats only), Steam news API (patch notes only), and ExtensionPay (subscription verification only).</div></div>
+    <div class="faq"><div class="fq">Is DeadlockMaster AI affiliated with Valve?</div><div class="fa">No. This is an independent fan project and is not affiliated with, endorsed by, or sponsored by Valve Corporation. Deadlock is a trademark of Valve.</div></div>
+  </div>
+</section>
+
+<footer>
+  <div class="fl">
+    <a href="https://chromewebstore.google.com/detail/pkdcdgnadaglbcjhffdmodhhlbncbcjk" target="_blank" rel="noopener">Chrome Web Store</a>
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="llms.txt">AI Description (llms.txt)</a>
+    <a href="https://extensionpay.com" target="_blank" rel="noopener">Payments by ExtensionPay</a>
+  </div>
+  <div class="fc">DeadlockMaster AI is an independent fan project. Not affiliated with Valve Corporation.<br>Deadlock™ is a trademark of Valve Corporation. All rights reserved. © 2025 darkmessiah0071</div>
+</footer>
+
+</body>
+</html>
